@@ -1,0 +1,38 @@
+.nav {
+    height: 5rem;
+    background: #30444e;
+    /*width: 80%;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.1rem;
+}
+
+/*@media (max-width: 786px) {*/
+/*    .nav {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/
+
+.logo {
+    width: 4.2rem;
+    padding: .8rem;
+}
+
+.nav__menu {
+    width: 60vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.nav__menu li a:Hover {
+    /*margin-left: ;*/
+    color: #6db199;
+}
+
+.nav__active {
+    color: #0e85a5;
+    transform: translateY(-10px);
+}

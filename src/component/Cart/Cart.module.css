@@ -1,0 +1,22 @@
+.cartBox {
+    display: flex;
+    align-items: center;
+}
+
+.cart {
+    width: 2rem;
+    margin-right: .5rem;
+}
+
+.cartWithNumber {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartNum {
+    font-size: 1.2rem;
+    margin-bottom: -.5rem;
+    color: #929f19;
+}
+
