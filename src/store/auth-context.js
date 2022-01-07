@@ -14,7 +14,7 @@ const AuthContext = React.createContext({
 export const AuthContextProvider = props => {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [isSignup, setIsSignup] = useState(false)
-    const [accountName, setAccountName] = useState("Friend")
+    const [accountName, setAccountName] = useState("")
 
     useEffect(() => {
         const storedUserLogInInfo = localStorage.getItem("isLoggedIn")

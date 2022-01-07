@@ -26,7 +26,8 @@ const ProductsDetails = () => {
 
     const styleItems = `${classes.products__box} ${classes.listInDetails}`
 
-    return <section>
+    return (
+    <section>
         <div>
             <h1>ProductDetails</h1>
         </div>
@@ -52,12 +53,12 @@ const ProductsDetails = () => {
                     img={item.img}
                     name={item.name}
                     price={item.price}
-                    description={item.description}
+                    // description={item.description}
                 />
             )}
         </ul>
 
-    </section>
+    </section>)
 }
 
 export default ProductsDetails;

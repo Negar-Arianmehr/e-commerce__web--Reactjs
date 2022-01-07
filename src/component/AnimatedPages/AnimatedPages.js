@@ -18,19 +18,6 @@ const absolutePage = {
     height: "100%",
 }
 
-// export const AnimatedLogin = (props) => {
-//     return (
-//         <motion.div
-//             initial={{opacity: 0, }}
-//             animate={{opacity: 1, }}
-//             exit={{opacity: 0, }}
-//             transition={pageTransition}
-//         >
-//             {props.children}
-//         </motion.div>
-//     )
-// }
-
 const AnimatedPages = (props) => {
     return (
         <motion.div

@@ -7,7 +7,6 @@ import CartContext from "../../store/cartContext";
 
 const Cart = () => {
     const navigate = useNavigate()
-    // const [orderOpen, setOrderOpen] = useState(false)
     const [showModal, setShowModal] = useState(false)
 
     const {items} = useContext(CartContext)
@@ -25,7 +24,8 @@ const Cart = () => {
     }
 
     const orderHandler = () => {
-        navigate('./Order')
+        setShowModal(false)
+        navigate("/Order")
     }
 
     return (
