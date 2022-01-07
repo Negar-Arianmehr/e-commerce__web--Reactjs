@@ -1,9 +1,10 @@
-import AuthForm2 from "./AuthForm2";
+import AuthForm from "./AuthForm";
+import AnimatedPages from "../AnimatedPages/AnimatedPages";
 
 const AuthPage = () => {
 
     return <section>
-            <AuthForm2/>
+        <AnimatedPages><AuthForm/></AnimatedPages>
     </section>
 }
 export default AuthPage;

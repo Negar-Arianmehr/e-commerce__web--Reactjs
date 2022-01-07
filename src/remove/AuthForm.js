@@ -1,8 +1,8 @@
 import React, {useRef, useState, useContext} from "react";
 
-import classes from "./AuthForm.module.css"
-import AuthContext from "../../store/auth-context";
-import ErrorModal from "../UI/ErrorModal";
+import classes from "../component/Auth/AuthForm.module.css"
+import AuthContext from "./auth-context";
+import ErrorModal from "../component/UI/ErrorModal";
 
 const AuthForm = React.memo(() => {
     //getting entered info

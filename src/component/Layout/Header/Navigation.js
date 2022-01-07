@@ -1,21 +1,14 @@
-import {useContext,useEffect} from "react"
+import {useContext} from "react"
 import {NavLink} from "react-router-dom";
 
 import classes from "./Navigation.module.css"
-import logo from "../../../img/logo.png"
-import AuthContext2 from "../../../store/auth-context2";
-// import CartIButton from "../../Cart/CartIButton";
+import logo from "../../../img/Negar.png"
+import AuthContext from "../../../store/auth-context";
 import Account from "./Account";
 import Cart from "../../Cart/Cart";
 
 const Navigation = () => {
-
-    const authCtx = useContext(AuthContext2)
-    // console.log(AuthContext2)
-
-    useEffect(()=> {
-        // console.log(authCtx)
-    },[authCtx])
+    const {isLoggedIn, isSignup, accountName, onLogout} = useContext(AuthContext)
 
     return (
         <nav className={classes.nav}>
@@ -26,7 +19,7 @@ const Navigation = () => {
 
                 <ul className={classes.nav__menu}>
                     <li>
-                        <NavLink className={(nav) => nav.isActive ? classes.nav__active : ""} to="/Home">
+                        <NavLink className={(nav) => nav.isActive ? classes["nav__active"] : ""} to="/Home">
                             Home
                         </NavLink>
                     </li>
@@ -35,32 +28,26 @@ const Navigation = () => {
                             Products
                         </NavLink>
                     </li>
-                    {authCtx.isLoggedIn &&
+                    {/*{!authCtx.isLoggedIn &&*/}
                     <li>
                         <NavLink className={(nav) => nav.isActive ? classes.nav__active : ""} to="/Auth">
-                            Login
+                            {!isSignup ? "Login" :
+                                <button className={classes.logout} onClick={onLogout}>Logout</button>}
                         </NavLink>
-                    </li>}
+                    </li>
 
-                    {!authCtx.isLoggedIn &&
+                    {isSignup &&
                     <li>
-                        <NavLink className={(nav) => nav.isActive ? classes.nav__active : ""} to="/Products">
-                    {authCtx.accountName}
-                    <Account />
-                        </NavLink>
-                    </li>
-                    }
-                    {!authCtx.isLoggedIn &&
-                    <li>
-                        <NavLink className={(nav) => nav.isActive ? classes.nav__active : ""} to="/Auth">
-                            Logout
+                        <NavLink className={(nav) => nav.isActive ? classes.nav__active : ""} to="/Order">
+                            <div className="account">
+                                <Account className={classes["nav__accountSvg"]}/>
+                                <span className={classes["nav__accountName"]}>{accountName}</span>
+                            </div>
                         </NavLink>
                     </li>
                     }
                     <li>
-                        {/*<NavLink to="#">*/}
-                                <Cart />
-                        {/*</NavLink>*/}
+                        <Cart/>
                     </li>
                 </ul>
 

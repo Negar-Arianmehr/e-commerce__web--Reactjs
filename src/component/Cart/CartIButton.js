@@ -1,11 +1,10 @@
 import classes from "./Cart.module.css"
-import Button from "../UI/Button";
 
 const CartIButton = (props) => {
 
 
     return (
-        <Button className={classes.cartBox} onClick={props.onClick}>
+        <button className={classes.cartBox} onClick={props.onClick}>
             <div className={classes.cartWithNumber}>
                 <span className={classes.cartNum}>{props.quantityOfItems}</span>
                 <span>
@@ -17,8 +16,8 @@ const CartIButton = (props) => {
                     </svg>
                 </span>
             </div>
-            <div>Cart</div>
-        </Button>
+            <div className={classes.cartCart}>Cart</div>
+        </button>
     )
 }
 

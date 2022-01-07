@@ -16,9 +16,9 @@
 //                 <div className={classes.content}>
 //                     <p>{props.message}</p>
 //                 </div>
-//                 <footer className={classes.action}>
+//                 <Footer className={classes.action}>
 //                     <Button onClick={props.onClick}>Okay</Button>
-//                 </footer>
+//                 </Footer>
 //             </Card>
 // }
 //
@@ -47,15 +47,15 @@ import Modal from "./Modal";
 
 const ErrorModal = props => {
     //className={classes.modal}
-    return <Modal>
+    return <Modal onClose={props.onClose}>
                 <header className={classes.header}>
                     <h2>{props.title}</h2>
                 </header>
                 <div className={classes.content}>
                     <p>{props.message}</p>
                 </div>
-                <footer className={classes.action}>
-                    <Button onClick={props.onClick}>Okay</Button>
+                <footer className={classes.actions}>
+                    <Button onClick={props.onClose}>Okay</Button>
                 </footer>
             </Modal>
 }

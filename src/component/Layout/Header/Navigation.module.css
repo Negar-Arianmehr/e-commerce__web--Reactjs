@@ -1,22 +1,35 @@
 .nav {
     height: 5rem;
-    background: #30444e;
+    background: #fff;
     /*width: 80%;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1.1rem;
 }
-
-/*@media (max-width: 786px) {*/
-/*    .nav {*/
-/*        flex-direction: column;*/
-/*    }*/
-/*}*/
+@media screen and (max-width: 800px){
+    .nav {
+        height: 3.5rem;
+    }
+}
 
 .logo {
-    width: 4.2rem;
-    padding: .8rem;
+    width: 10vmin;
+    /*height: 40vmin;*/
+    margin: .8rem;
+}
+
+.logout {
+    background-color: transparent;
+    border: 0 solid transparent;
+    font-size: 2.7vmin;
+     color: #446d6b;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.logout:hover {
+    color: #9d6666;
 }
 
 .nav__menu {
@@ -27,12 +40,36 @@
     font-size: 1.6rem;
 }
 
+
+.nav__menu li {
+    /*text-decoration: none;*/
+    /*color: #446d6b;*/
+    /*font-size: 1.7rem;*/
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .nav__menu li a:Hover {
     /*margin-left: ;*/
-    color: #6db199;
+    color: #b16d6d;
+        transform: translateY(-10px);
 }
 
 .nav__active {
-    color: #0e85a5;
-    transform: translateY(-10px);
+    color: #b16a6a;
+    /*transform: translateY(-10px);*/
 }
+
+.nav__accountName {
+    margin-top: .5rem;
+    color: #9d6666;
+    text-transform: uppercase;
+}
+
+.nav__accountSvg {
+    color: #9d6666!important;
+    width: 2rem;
+    margin-right: .5rem;
+}
+
+

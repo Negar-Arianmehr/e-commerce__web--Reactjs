@@ -3,6 +3,20 @@
   overflow: scroll;
 }
 
+.emptyCart {
+  color: #d46666;
+  font-size: 2rem;
+  align-items: center;
+  padding-left: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .emptyCart {
+    font-size: 1.2rem;
+  }
+}
+
+
 .cart-item {
   display: flex;
   justify-content: space-around;
@@ -31,7 +45,13 @@
 
 .price {
   font-weight: bold;
-  color: #c16b77;
+  color: #4b8880;
+}
+
+.totalPrice {
+  font-size: 1.6rem;
+  padding: 1.2rem;
+  margin-right: -2vmin;
 }
 
 .amount {

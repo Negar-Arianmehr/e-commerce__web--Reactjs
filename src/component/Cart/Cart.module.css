@@ -1,11 +1,26 @@
 .cartBox {
     display: flex;
     align-items: center;
+    border: 0 solid transparent;
+    color: #60869c;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .cartBox {
+    font-size: 1.4rem;
+  }
 }
 
 .cart {
     width: 2rem;
     margin-right: .5rem;
+}
+@media (max-width: 768px) {
+  .cart {
+    width: 1.5rem;
+  }
 }
 
 .cartWithNumber {
@@ -14,9 +29,32 @@
     align-items: center;
 }
 
+.cartWithNumber span svg {
+    /*fill: #60869c;*/
+    color: #60869c;
+}
+
 .cartNum {
     font-size: 1.2rem;
     margin-bottom: -.5rem;
-    color: #929f19;
+    color: #6898a7;
+    padding-bottom: 1px;
+}
+
+@media (max-width: 768px) {
+  .cartNum {
+    font-size: 1rem;
+      padding-right: .5rem;
+  }
+}
+.cartCart {
+    color: #60869c;
+    font-size: 1.7rem;
+}
+
+@media (max-width: 768px) {
+  .cartCart{
+    font-size: 1rem;
+  }
 }
 

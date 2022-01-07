@@ -1,5 +1,5 @@
 
-import TestProductsInput from "./TestProductsInput";
+import ProductDetailInput from "./ProductDetailInput";
 
 import {useContext} from "react"
 import {useParams} from "react-router-dom";
@@ -8,7 +8,7 @@ import CartContext from "../../../store/cartContext";
 import ProductsItem from "../ProductsItem";
 import classes from "../Products.module.css"
 
-const TestProductsDetails = () => {
+const ProductsDetails = () => {
     const params = useParams()
 
     const cartCtx = useContext(CartContext)
@@ -21,17 +21,18 @@ const TestProductsDetails = () => {
     const filterItem = cartCtx.defaultItems.filter(item => item.id === params.ProductId)
 
     const addToCartHandler = quantity => {
-        cartCtx.addItem({...findId, quantity: quantity})
+        cartCtx.addItem({...findId, quantity: quantity, id: params.ProductId})
     }
 
-    const styles = `${classes.products__box} ${classes.listInDetails}`
+    const styleItems = `${classes.products__box} ${classes.listInDetails}`
 
     return <section>
-        <h1>ProductDetails</h1>
-        <div className="flex">
+        <div>
+            <h1>ProductDetails</h1>
+        </div>
+        <div>
             {filterItem.map(item => (
-                <TestProductsInput
-                    className={classes.everyProduct}
+                <ProductDetailInput
                     key={item.id}
                     id={item.id}
                     img={item.img}
@@ -45,7 +46,7 @@ const TestProductsDetails = () => {
         <ul className="flex">
             {cartCtx.defaultItems.filter(item => item.id !== params.ProductId).map(item =>
                 <ProductsItem
-                    className={styles}
+                    className={styleItems}
                     key={item.id}
                     id={item.id}
                     img={item.img}
@@ -59,4 +60,4 @@ const TestProductsDetails = () => {
     </section>
 }
 
-export default TestProductsDetails;
+export default ProductsDetails;

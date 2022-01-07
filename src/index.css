@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+
 :root {
     --soDark: #311825;
     --dark: #633d51;
@@ -16,12 +19,14 @@ body {
     line-height: 1.7;
 
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+      font-family: 'Open Sans', 'Lato', sans-serif;
+
+    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
+    /*'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
+    /*sans-serif;*/
     /*-webkit-font-smoothing: antialiased;*/
     /*-moz-osx-font-smoothing: grayscale;*/
-
+    /*background-color: black;*/
     overflow-x: hidden;
 }
 
@@ -42,13 +47,20 @@ li {
 
 a {
     text-decoration: none;
-    color: #b3b4b7;
+    color: #60869c;
+    font-size: 2.7vmin;
+    /*font-weight: 400;*/
 }
 
 h1 {
     text-align: center;
     color: var(--light);
     font-size: 2.2rem;
+}
+
+h4 {
+    color: #b59780;
+    margin-bottom: 2.8rem;
 }
 
 .main {
@@ -67,8 +79,13 @@ h1 {
     color: red;
 }
 
-.order {
-    height: 100vh;
-    background-color: #72a8b7;
-    padding: 35% 20%;
+.account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__active {
+    color: #b16a6a;
+    /*transform: translateY(-10px);*/
 }

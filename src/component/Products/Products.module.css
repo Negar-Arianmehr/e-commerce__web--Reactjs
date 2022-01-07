@@ -25,6 +25,10 @@
     border-top-right-radius: 5px;
 }
 
+.products__box p {
+    padding: 0 1.2rem;
+}
+
 .productQuantity {
     width: 20rem;
     padding: .8rem;
@@ -32,18 +36,4 @@
     color: #370202;
 }
 
-.everyProduct {
-    display: flex;
-    /*flex-direction: column;*/
-    justify-content: space-around;
-}
 
-.everyProduct div {
-     display: flex;
-    justify-content: space-around;
-}
-
-.everyProduct img {
-    width: 20vw;
-    border-radius: 5px;
-}

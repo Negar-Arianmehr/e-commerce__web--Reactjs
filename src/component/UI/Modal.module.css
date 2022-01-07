@@ -18,20 +18,26 @@
 }
 
 .header {
-  background: #3e0803;
+  background: #f16254;
+  border-radius: 2px;
   padding: 1rem;
 }
 
 .header h2 {
   margin: 0;
-  color: white;
+  color: #ffffff;
 }
 
 .content {
+  /*background-color: rgba(176, 111, 111, 0.3);*/
   padding: 1rem;
+  color: #1a1919;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 .actions {
+  margin-top: .8rem;
   padding: 1rem;
   display: flex;
   justify-content: flex-end;
@@ -41,5 +47,12 @@
   .modal {
     left: calc(50% - 20rem);
     width: 40rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 1.4rem;
   }
 }
