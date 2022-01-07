@@ -10,8 +10,9 @@ const CartModal = props => {
 
     return (
         <li key={props.id} className={classes["cart-item"]}>
-            <div><img src={props.src} alt=""/></div>
-            
+            <div>
+                <img src={props.src} alt="pic of Item"/>
+            </div>
             <div>
                 <h2>{props.name}</h2>
             </div>

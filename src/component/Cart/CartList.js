@@ -50,8 +50,8 @@ const hasItem = cartCtx.items.length > 0
                     ))}
                 </ul>
                 <div className={style.totalPrice}>
-                    <span>Total Price</span>
-                    <span>{totalPriceFix}€</span>
+                    <span>Total Price </span>
+                    <span> {totalPriceFix}€</span>
                 </div>
             </>
             }

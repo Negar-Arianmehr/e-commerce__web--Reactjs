@@ -57,14 +57,13 @@ const AuthForm = React.memo(() => {
     const closeErrorMessage = () => {
         setGettingError(false)
     }
-    console.log(authCtx.isLoggedIn)
-    console.log(authCtx.isSignup)
-//useNavigate for replace the page with home
 
     return (
         <section className={classes.form}>
             <form className={classes.form__contents} onSubmit={submitHandler}>
-                <h4>For testing login, you can use name@test.com</h4>
+                <h4>This is a test website. You can use a dummy email like this:
+                    <span style={{textTransform: "lowercase"}}> name@test.com</span>
+                </h4>
                 {gettingError &&
                 <ErrorModal
                     title={errorMessage.title}
