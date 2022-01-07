@@ -1,0 +1,48 @@
+.productDetail {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 2.5rem auto 5rem;
+    align-content: space-between;
+    align-items: stretch;
+}
+
+.productDetail__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.6rem;
+}
+
+.productDetail__imgBox {
+    width: 30vw;
+    border-radius: 5px;
+    object-fit: cover;
+    display: block;
+
+    overflow: hidden;
+}
+
+.productDetail__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+      transition: all .4s ease-in-out;
+}
+
+.productDetail img:hover {
+    transform: scale(1.9);
+    cursor: zoom-in;
+    overflow: hidden;
+
+}
+
+.productDetail form label{
+    margin-right: .7rem;
+}
+
+.productDetail form input{
+    margin-right: 1.8rem;
+}
