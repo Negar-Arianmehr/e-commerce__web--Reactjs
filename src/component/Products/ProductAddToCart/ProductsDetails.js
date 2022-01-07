@@ -7,6 +7,7 @@ import {useParams} from "react-router-dom";
 import CartContext from "../../../store/cartContext";
 import ProductsItem from "../ProductsItem";
 import classes from "../Products.module.css"
+import AnimatedDetailPage from "../../AnimatedPages/AnimatedDetailsPage";
 
 const ProductsDetails = () => {
     const params = useParams()
@@ -27,38 +28,40 @@ const ProductsDetails = () => {
     const styleItems = `${classes.products__box} ${classes.listInDetails}`
 
     return (
-    <section>
-        <div>
-            <h1>ProductDetails</h1>
-        </div>
-        <div>
-            {filterItem.map(item => (
-                <ProductDetailInput
-                    key={item.id}
-                    id={item.id}
-                    img={item.img}
-                    name={item.name}
-                    price={item.price}
-                    description={item.description}
-                    onAddToCart={addToCartHandler}
-                />))}
-        </div>
+        <AnimatedDetailPage>
+            <section>
+                <div>
+                    <h1>ProductDetails</h1>
+                </div>
+                <div>
+                    {filterItem.map(item => (
+                        <ProductDetailInput
+                            key={item.id}
+                            id={item.id}
+                            img={item.img}
+                            name={item.name}
+                            price={item.price}
+                            description={item.description}
+                            onAddToCart={addToCartHandler}
+                        />))}
+                </div>
 
-        <ul className="flex">
-            {cartCtx.defaultItems.filter(item => item.id !== params.ProductId).map(item =>
-                <ProductsItem
-                    className={styleItems}
-                    key={item.id}
-                    id={item.id}
-                    img={item.img}
-                    name={item.name}
-                    price={item.price}
-                    // description={item.description}
-                />
-            )}
-        </ul>
+                <ul className="flex">
+                    {cartCtx.defaultItems.filter(item => item.id !== params.ProductId).map(item =>
+                        <ProductsItem
+                            className={styleItems}
+                            key={item.id}
+                            id={item.id}
+                            img={item.img}
+                            name={item.name}
+                            price={item.price}
+                            // description={item.description}
+                        />
+                    )}
+                </ul>
 
-    </section>)
+            </section>
+        </AnimatedDetailPage>)
 }
 
 export default ProductsDetails;

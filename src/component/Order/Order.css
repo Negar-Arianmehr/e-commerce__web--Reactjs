@@ -1,28 +1,26 @@
 .order {
     height: 100vh;
     background-image: linear-gradient(to right, rgb(118, 179, 151), rgb(215, 141, 141));
-    padding: 35% 20%;
 }
 
+.order div{
+    padding: 30vh 30vw;
+}
 .order__name {
     color: #090808;
     font-size: 3.5rem;
     font-weight: 700;
     font-style: italic;
     text-transform: uppercase;
-    /*animation: Beat ease-in-out infinite;*/
 }
-/*@keyframes Beat {*/
-/*    0% {*/
-/*        transform: translateY(0);*/
-/*    }*/
-/*     50% {*/
-/*        transform: translateY(10px);*/
-/*    }*/
-/*    70% {*/
-/*        transform: translateY(-10px);*/
-/*    }*/
-/*     100% {*/
-/*        transform: translateY(0);*/
-/*    }*/
-/*}*/
+
+@media screen and (max-width: 800px) {
+    .order__name {
+         font-size: 2.5rem;
+    font-weight: 400;
+    }
+    .order div{
+        padding: 3rem;
+    }
+
+}
