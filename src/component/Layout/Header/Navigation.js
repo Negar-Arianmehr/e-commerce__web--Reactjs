@@ -3,22 +3,37 @@ import {NavLink} from "react-router-dom";
 import {useMediaQuery} from "react-responsive"
 
 import classes from "./Navigation.module.css"
-import logo from "../../../img/Negar.png"
+import logo from "../../../img/logoneg.png"
 import AuthContext from "../../../store/auth-context";
 import Account from "./Account";
 import Cart from "../../Cart/Cart";
 import MenuButton from "./mobileNav/MenuButton";
 import MobileNav from "./mobileNav/MobileNav";
+import CloseButton from "./mobileNav/CloseButton";
 
 const Navigation = () => {
     const {isSignup, accountName, onLogout} = useContext(AuthContext)
     const isMobile = useMediaQuery({maxWidth: 800})
 
     const [isOpen, setOpen] = useState(false)
+    const [isClose, setClose] = useState(true)
     const openHandler = () => {
         setOpen(previous => !previous)
+        setClose(true)
+        // setOpen(true)
     }
-
+    const closeHandler = () => {
+        setClose(false)
+        setOpen(false)
+    }
+    // console.log(isClose)
+    // useEffect(()=> {
+    //     if (isOpen){
+    //         setOpen(true)
+    //     }else {
+    //         setOpen(false)
+    //     }
+    // },[isClose])
 
     return (
         <nav className={classes.nav}>
@@ -42,7 +57,9 @@ const Navigation = () => {
                     </div>}
                     {isOpen && <MobileNav
                         onClose={openHandler}
-                        className={classes["nav__menu--mobile"]}/>}
+                        className={classes["nav__menu--mobile"]}
+                        onAdd={closeHandler}
+                    />}
                     {/*{isOpen && <div className={classes["nav__menu--mobile"]}>*/}
                     {/*    <li>*/}
                     {/*        <NavLink className={(nav) => nav.isActive ? classes["nav__active"] : ""} to="/Home">*/}
@@ -77,7 +94,8 @@ const Navigation = () => {
                         <li>
                             <Cart/>
                         </li>
-                        {isMobile && <MenuButton onClick={openHandler}/>}
+                        {isMobile && !isOpen && <MenuButton onClick={openHandler}/>}
+                        {isOpen && isClose && <CloseButton onClick={closeHandler}/>}
                     </div>
                 </ul>
 

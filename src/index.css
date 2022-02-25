@@ -36,16 +36,9 @@ html {
 }
 
 code {
-    /*font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
-    /*monospace;*/
     font-family: 'Open Sans', 'Lato', sans-serif;
 }
 
-/*@media (prefers-reduced-motion: no-preference) {*/
-/*  .App-logo {*/
-/*    animation: App-logo-spin infinite 20s linear;*/
-/*  }*/
-/*}*/
 
 li {
     list-style: none;
@@ -68,6 +61,11 @@ h1 {
 h4 {
     color: #b59780;
     margin-bottom: 2.8rem;
+}
+
+button {
+    border: none;
+    background-color: transparent;
 }
 
 .main {

@@ -11,7 +11,7 @@ import classes from "./Products.module.css";
 //}
 
 const ProductsList = (props) => {
-    const styles = `${classes.products__box} ${classes["products__box--width"]}`
+    const styles = `${classes.products__box} ${classes["products__box--width"]}`;
 
     return (
         <div className={classes.products}>
@@ -28,8 +28,7 @@ const ProductsList = (props) => {
                     />
                 )}
             </ul>
-        </div>
-    );
-}
+        </div>)
+};
 
 export default ProductsList;

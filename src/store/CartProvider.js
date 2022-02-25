@@ -74,12 +74,6 @@ const CartProvider = props => {
         dispatchCartAction({type: "REMOVE", id: id})
     }
 
-    // const fixPriceHandler = (str, val) => {
-    //     str = str.toString();
-    //     str = str.slice(0, (str.indexOf(".")) + val + 1);
-    //     return Number(str);
-    // }
-
     const cartContext = {
         defaultItems: [
         {
@@ -87,42 +81,42 @@ const CartProvider = props => {
             img: img1,
             name: "vase",
             price: 15.998,
-            description: "This products made with san, with hands",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         },
         {
             id: "2",
             img: img2,
             name: "vase",
             price: 15.99,
-            description: "This products made with san, with hands",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         },
         {
             id: "3",
             img: img3,
             name: "vase",
             price: 15.99,
-            description: "This products made with san, with hands",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         },
         {
             id: "4",
             img: img4,
             name: "vase",
             price: 15.99,
-            description: "This products made with san, with hands",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         },
         {
             id: "5",
             img: img5,
             name: "vase",
             price: 15.99,
-            description: "This products made with san, with hands",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         },
         {
             id: "6",
             img: img6,
             name: "vase",
             price: 15.99,
-            description: "This products made with sand, and hands",
+            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         }],
         items: cartState.items,
         totalQuantity: cartState.totalQuantity,
